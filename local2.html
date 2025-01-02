@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="local.css">
+</head>
+
+<body>
+    <form action="">
+        <div class="header"></i>
+            <h2>Employee <i class="fas fa-database"></i> Database</h2>
+        </div>
+
+        <div class="frombx">
+
+            <div class="box">
+                <input type="text" name="Name" placeholder="Employee Name" id="ename"> <br>
+                <input type=" text" name="des" placeholder=" Employee desingnation" id="edes"> <br>
+                <input type=" text" name="identity" placeholder="Employee ID" id="eid">
+                <input type=" text" name="phone" placeholder="contactNumber" id="enum">
+                <input type=" text" name="address" placeholder="address" id="eadd">
+                <input type="text" name="dob" placeholder="Date-of-birth" id="edob">
+
+            </div>
+            <button class="apply" id="submit" type="button"><i class="fas fa-user"></i> Apply</button>
+
+
+
+        </div>
+
+    </form>
+    <h1 id="dest"></h1>
+    <div class="container" id="container">
+
+
+
+
+    </div>
+
+    <script>
+        let submit = document.getElementById("submit");
+
+
+
+
+        submit.addEventListener("click", function (e) {
+
+            let Employee_name = e.target.form.Name.value;
+            let Employee_desingnation = e.target.form.des.value;
+            let Employee_identity = e.target.form.identity.value;
+
+            let Employee_address = e.target.form.address.value;
+            let Employee_phone = e.target.form.phone.value;
+            let Employee_Dob = e.target.form.dob.value;
+
+
+            //console.log(Employee_name+Employee_address+Employee_Dob+Employee_desingnation);
+
+            let localdata = JSON.parse(localStorage.getItem("database")) ?? []
+
+            localdata.push({
+
+                name: Employee_name,
+                Employee_desingnation: Employee_desingnation,
+                Employee_identity: Employee_identity,
+                Employee_Dob: Employee_Dob,
+                Employee_phone: Employee_phone,
+                Employee_address: Employee_address,
+
+            })
+
+            let setdata = localStorage.setItem("database", JSON.stringify(localdata));
+
+            displaydata()
+            location.reload()
+            e.preventDefault();
+
+        })
+        
+
+
+        function displaydata() {
+            let localdata = JSON.parse(localStorage.getItem("database")) ?? []
+            localdata.forEach((element, index) => {
+
+                let container_div = document.getElementById("container");
+
+
+                let created_div = document.createElement("div");
+                console.log(created_div);
+                created_div.innerHTML = `
+                
+
+                <div class="get" id="get">
+              <div class="fx">
+                <center>
+                    <i class="fas fa-trash delete_icon" id="delete_icon" onclick="dl(${index})"></i> 
+                    <div class="title">CSA Technologies </div>
+                </center>
+                <center>
+                    <div class="name">${element.name}</div>
+                </center>
+                <div class="desingnation">Desingnation: ${element.Employee_desingnation}</div>
+                <div class="empid">Employee Id: ${element.Employee_identity}</div>
+                <div class="dob">Date-of-birth: ${element.Employee_Dob}</div>
+
+                <div class="phone">Contact: ${element.Employee_phone}</div>
+
+                <div class="address">Address: ${element.Employee_address}</div>
+
+              </div>
+
+             <button class="divbtn">connect</button>
+             </div>
+          
+                
+                `
+
+
+                container_div.appendChild(created_div);
+
+
+
+
+
+            });
+
+        }
+
+        function dl(index) {
+            let localdata = JSON.parse(localStorage.getItem("database")) ?? []
+            localdata.splice(index, 1);
+            let setdata = localStorage.setItem("database", JSON.stringify(localdata));
+
+            location.reload()
+        }
+
+
+        displaydata();
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+
+</html>

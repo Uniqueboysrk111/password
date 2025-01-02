@@ -1,0 +1,185 @@
+
+.get {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 2%;
+    margin-top: 20px;
+    padding-top: 2%;
+    box-shadow: 0px 0px 10px black;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.delete_icon{
+    margin-top: 4px;
+    position: absolute;
+    margin-left: 122px;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 5px;
+    color:whitesmoke;
+
+
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    flex-wrap: wrap;
+    padding: 30px;
+
+
+}
+
+.title {
+    font-size: x-large;
+    font-weight: bold;
+    padding-bottom: 5px;
+    color: white;
+    background:linear-gradient(rgb(255, 77, 0),crimson);
+    letter-spacing: 2px;
+    border-top-right-radius: 20px;
+    height: 10%;
+    padding: 5px;
+
+}
+
+.name {
+    font-size: x-large;
+
+    height: 10%;
+}
+
+.desingnation {
+    margin-top: 10px;
+    font-size: larger;
+    height: 10%
+}
+
+.empid {
+    margin-top: 5px;
+
+    font-size: larger;
+    height: 10%;
+}
+
+.phone {
+    margin-top: 5px;
+    font-size: larger;
+    height: 10%;
+}
+
+.dob {
+    margin-top: 5px;
+    font-size: larger;
+    height: 10%;
+
+}
+
+.phone {
+    margin-top: 5px;
+    font-size: larger;
+    height: 10%;
+}
+
+.address {
+    margin-top: 5px;
+
+    height: 10%;
+}
+
+
+.divbtn {
+
+    height: 40px;
+    border: none;
+    background: linear-gradient(rgb(2, 126, 234), rgb(71, 5, 203));
+    border-radius: 5px;
+    font-size: larger;
+    color: white;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+
+    background: linear-gradient(rgb(255, 69, 12), rgb(239, 8, 73));
+    color: white;
+    font-family: serif;
+    padding: 1%;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header i {
+    font-size: 40px;
+}
+
+.frombx {
+    height: 250px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+
+    background: linear-gradient(chartreuse, rgb(251, 255, 0));
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: -10px 10px 10px rgb(192, 186, 186);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 80%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+input {
+    border: none;
+    width: 40%;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+
+}
+
+.fx {
+    height: 80%;
+}
+
+.apply {
+
+    width: 250px;
+    margin-top: 20px;
+    height: 35px;
+    border: none;
+    background: linear-gradient(rgb(212, 0, 255), rgb(152, 2, 175));
+    font-size: larger;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
